@@ -8,17 +8,33 @@
     <body>
         <div class="container">
             <div class="column">
-                <div class="row">
+                <div class="row background--primary">
                     <h1>Lorem Ipsum</h1>
                     <p>
                         <small>These are all the avaliable type modifiers:</small>
-                        <span class="blockline text--primary"> This is the <kbd>text--primary</kbd> colour </span>
-                        <span class="blockline text--secondary"> This is the <kbd>text--secondary</kbd> colour </span>
-                        <span class="blockline text--heading"> This is the <kbd>text--heading</kbd> colour </span>
+                        <span class="blockline text--primary content--left"> This is the <kbd>text--primary</kbd> colour </span>
+                        <span class="blockline text--secondary content--center"> This is the <kbd>text--secondary</kbd> colour </span>
+                        <span class="blockline text--heading content--right"> This is the <kbd>text--heading</kbd> colour </span>
                         <span class="blockline text--primary"> <a href="#" class="text--link">This is the <kbd>text--link</kbd> colour</a></span>
                         <span class="blockline text--primary"> <a href="#" class="text--link--block">This is the <kbd>text--link--block</kbd> colour</a> </span>
                         <span class="blockline text--ui"> This is the <kbd>text--ui</kbd> colour </span>
                     </p>
+                </div>
+                <div class="background--secondary content--center">
+                    <h1 class="light"> This background is <kbd>background--secondary</kbd></h1>
+                    <p class="text--ui"> This is the <kbd>text--ui</kbd> colour on a darker background</p>
+
+                    <div class="content--center -flex">
+                        <div class="background--success" style="display: inline-block; width: 150px; height: 40px; vertical-align: middle; margin-bottom: 10px;">
+                            <kbd>background--success</kbd>
+                        </div>
+                        <div class="background--warning" style="display: inline-block; width: 150px; height: 40px; vertical-align: middle; margin-bottom: 10px;">
+                            <kbd>background--warning</kbd>
+                        </div>
+                        <div class="background--error" style="display: inline-block; width: 150px; height: 40px; vertical-align: middle; margin-bottom: 10px;">
+                            <kbd>background--error</kbd>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
