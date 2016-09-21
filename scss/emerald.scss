@@ -1,4 +1,8 @@
 @charset 'UTF-8';
 
 @import 'globals/functions';
-@import 'components/base';
+@import 'globals/mixins';
+@import 'globals/variables';
+
+
+@import 'components/typography';

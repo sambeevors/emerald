@@ -1,0 +1,49 @@
+/* General Text Styles */
+html,
+body,
+* {
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 16px;
+}
+
+kbd {
+    padding:0.1em 0.6em;
+    border:1px solid #ccc;
+    font-size:11px;
+    font-family:Arial,Helvetica,sans-serif;
+    background-color:#f7f7f7;
+    color:#333;
+    box-shadow:0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+    border-radius:3px;
+    display:inline-block;
+    margin:0 0.1em;
+    text-shadow:0 1px 0 #fff;
+    line-height:1.4;
+    white-space:nowrap;
+    text-decoration: none!important;
+}
+
+
+/* Colours */
+
+.text {
+    &--primary {
+        color: getColor(text, primary);
+    }
+    &--secondary {
+        color: getColor(text, secondary);
+    }
+    &--heading {
+        color: getColor(text, heading);
+    }
+    &--link {
+        color: getColor(text, link);
+
+        &--block {
+            @include block-link(getColor(text, link))
+        }
+    }
+    &--ui {
+        color: getColor(text, ui);
+    }
+}
