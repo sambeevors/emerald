@@ -1,35 +1,82 @@
 // Needs redoing
 
-$gutter-width: 10px;
+ $gutter-width: 10px;
 
-.container {
-    max-width: $grid-max-width;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-}
-
-.row {
+.grid-container{
     width: 100%;
-    display: block;
+    max-width: 1200px;
 }
 
-.column {
-    padding: 10px;
-    display: inline-block;
-    width: 100%;
-    
-    &.one-half {
-        max-width: calc(49.7777% - (#{$gutter-width} / 2));
-        margin-right: $gutter-width;
-    }
-    
-    &.one-third { // THIS BIT IS CURRENTLY BROKEN
-        max-width: calc(32.6666% - (#{$gutter-width} * .5));
-        margin-right: $gutter-width;
-    }
-    
-    &:last-child {
-        margin-right: 0;
-    }
+/*-- our cleafix hack -- */
+.row:before,
+.row:after {
+    content:"";
+      display: table ;
+    clear:both;
 }
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+    /*-- our gutter -- */
+    padding: $gutter-width;
+    background-color: #FFDCDC;
+}
+
+.col-1{ width: 16.66%; }
+.col-2{ width: 33.33%; }
+.col-3{ width: 50%;    }
+.col-4{ width: 66.66%; }
+.col-5{ width: 83.33%; }
+.col-6{ width: 100%;   }
+
+.outline, .outline *{
+    outline: 1px solid #F6A1A1;
+}
+
+/*-- some extra column content styling --*/
+[class*='col-'] > p {
+ background-color: #FFC2C2;
+ padding: 0;
+ margin: 0;
+ text-align: center;
+ color: white;
+}
+
+
+
+
+
+//
+// .container {
+//     max-width: $grid-max-width;
+//     margin: 0 auto;
+//     display: block;
+//     position: relative;
+// }
+//
+// .row {
+//     width: 100%;
+//     display: block;
+// }
+//
+// .column {
+//     padding: 10px;
+//     display: inline-block;
+//     width: 100%;
+//
+//     &.one-half {
+//         max-width: calc(49.7777% - (#{$gutter-width} / 2));
+//         margin-right: $gutter-width;
+//     }
+//
+//     &.one-third { // THIS BIT IS CURRENTLY BROKEN
+//         max-width: calc(32.6666% - (#{$gutter-width} * .5));
+//         margin-right: $gutter-width;
+//     }
+//
+//     &:last-child {
+//         margin-right: 0;
+//     }
+// }

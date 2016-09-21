@@ -8,12 +8,12 @@ body,
 
 * {
     box-sizing: border-box;
-    
+
     &::before,
     &::after {
         box-sizing: border-box;
     }
-    
+
     color: getColor(text, primary);
 }
 
@@ -59,7 +59,7 @@ p {
     margin-bottom: 8px;
     line-height: 1.25;
     font-weight: $font-weight;
-    
+
     small {
         color: getColor(text, secondary);
         font-size: 80%;
