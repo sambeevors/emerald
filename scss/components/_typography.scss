@@ -6,6 +6,15 @@ body,
     font-size: 16px;
 }
 
+* {
+    box-sizing: border-box;
+    
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
 kbd {
     padding:0.1em 0.6em;
     border:1px solid #ccc;
