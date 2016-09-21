@@ -12,7 +12,8 @@ $colors: (
         "secondary": #4c4c4c,
         "heading":   #111,
         "link":      #9edc94,
-        "ui":        #ddd
+        "ui":        #ddd,
+        "light": #fff
     ),
 
     background: (
@@ -105,16 +106,11 @@ $new-grid-width: 80%;
 $is-fluid: true; // Change to true to enable the fluid grid
 $use-global-border-box: false; // Change to true the enable global border-box
 
-$link-color: #1EAEDB; // default link color
-$link-hover: #0FA0CE; // default link color on :hover
+$link-color: #9edc94; // default link color
+$link-hover: darken(#9edc94, 15); // default link color on :hover
 $link-decoration: underline; // default link decoration
 
 $base-width: if($is-fluid, 100%, ($base-col-width + $base-gutter-width) * $base-col-count);
-
-$font-size: 15px;  // default font size. Change here will adjust sizes across the board.
-$font-weight: 400; // sets the font weight
-$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; // default fonts
-$font-color: #222;  // default font color
 
 $heading-family: $font-family; // default heading (h1-h6) font
 $heading-color: $font-color; // default heading (h1-h6) color
@@ -136,7 +132,8 @@ $use-new-grid: true;
 $font-size: 16px !global;  // default font size. Change here will adjust sizes across the board.
 $font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !global; // default fonts
 $heading-family: "Georgia", "Times New Roman", serif !global; // default heading (h1-h6) font
-$font-color: #444 !global;  // default font color
-$heading-color: #181818 !global; // default heading (h1-h6) color
+$font-weight: 400; // sets the font weight
+$font-color: #111 !global;  // default font color
+$heading-color: #222 !global; // default heading (h1-h6) color
 $form-font: $font-family !global; // default form font
 $base-font-size: $font-size;
