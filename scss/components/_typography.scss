@@ -13,6 +13,12 @@ body,
     &::after {
         box-sizing: border-box;
     }
+    
+    color: getColor(text, primary);
+    
+    &.light--text {
+        color: getColor(core, white);
+    }
 }
 
 /* Type Base */
