@@ -33,6 +33,11 @@
     outline: 1px solid #F6A1A1;
 }
 
+/* This is just the content, so background
+   colour here will just put a background
+   on the content meaning a white background
+   on the div will give the illusion of margin */
+
 [class*='column-'] > p {
  padding: 0;
  margin: 0;
