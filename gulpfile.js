@@ -5,10 +5,15 @@ var minifycss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var neat = require('node-neat');
+var scsslint = require('gulp-scss-lint');
 
 gulp.task('sass', function () {
 	gulp.src('scss/emerald.scss')
 		.pipe(plumber())
+		.pipe(scsslint({
+			'config': '.scss-lint.yml',
+			'reporterOutput': 'report.json'
+		}))
 		.pipe(sass({
 			includePaths: ['scss'].concat(neat)
 		}))
