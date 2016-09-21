@@ -1,6 +1,5 @@
-// Needs redoing
-
- $gutter-width: 10px;
+ $gutter-width: 100px;
+ $gutter-height: 20px;
 
 .grid-container{
     width: 100%;
@@ -20,7 +19,7 @@
     min-height: 1px;
     width: 16.66%;
     /*-- our gutter -- */
-    padding: $gutter-width;
+    padding: $gutter-height $gutter-width;
 }
 
 .column-one-sixth{ width: 16.66%; }
@@ -34,7 +33,6 @@
     outline: 1px solid #F6A1A1;
 }
 
-/*-- some extra column content styling --*/
 [class*='column-'] > p {
  padding: 0;
  margin: 0;
