@@ -71,8 +71,10 @@ $colors: (
 ) !default;
 
 $font-size: 16px !global;
-$font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !global;
-$heading-family: "Georgia", "Times New Roman", serif !global;
-
+$font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif !global;
+$font-weight: 400; 
 $font-color: #333 !global; 
+
+$heading-family: 'Roboto', sans-serif !global;
+$heading-weight: 300 !global;
 $heading-color: #111 !global;

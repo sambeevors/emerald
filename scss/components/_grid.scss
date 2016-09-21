@@ -1,37 +1,29 @@
-/* Device Breakpoints */
 $tablet-width: 768px !global;
 $mobile-portrait-width: 300px !global;
 $mobile-landscape-width: 420px !global;
 $mobile-fluid-width: 100%;
 $grid-max-width: 1000px;
-/* Settings */
 $use-rem: false;
 $use-em: false;
 $use-percent: false;
-$prefix-for-webkit:    false;
-$prefix-for-mozilla:   false;
+$prefix-for-webkit: false;
+$prefix-for-mozilla: false;
 $prefix-for-microsoft: false;
-$prefix-for-opera:     false;
-$prefix-for-spec:      false;
-// The width of each columns
+$prefix-for-opera: false;
+$prefix-for-spec: false;
 $base-col-width: 40px !global;
-// The space between columns
 $base-gutter-width: 20px !global;
-// The number of columns
 $base-col-count: 12 !global;
-// the new grid with set within the 550px breakpoint
 $new-grid-width: 80%;
-// Default overrides for new theme
-$is-fluid: true; // Change to true to enable the fluid grid
-$use-global-border-box: false; // Change to true the enable global border-box
-$link-color: #9edc94; // default link color
-$link-hover: darken(#9edc94, 15); // default link color on :hover
-$link-decoration: underline; // default link decoration
+$is-fluid: true; 
+$use-global-border-box: false; 
+$link-color: #9edc94; 
+$link-hover: darken(#9edc94, 15); 
+$link-decoration: underline; 
 $base-width: if($is-fluid, 100%, ($base-col-width + $base-gutter-width) * $base-col-count);
-$heading-family: $font-family; // default heading (h1-h6) font
-$heading-color: $font-color; // default heading (h1-h6) color
-$heading-weight: 300; // sets the weight of the heading text
-$form-font: $font-family; // default form font
+$heading-family: $font-family; 
+$heading-color: $font-color; 
+$form-font: $font-family; 
 $button-color: #555;
 $button-weight: 600;
 $button-font-uppercase: true;
@@ -40,12 +32,9 @@ $grid-max-width: 960px;
 $base-col-count: 12;
 $base-col-width: 60px;
 $use-new-grid: true;
-$font-weight: 400; // sets the font weight
-$form-font: $font-family !global; // default form font
+$form-font: $font-family !global; 
 $base-font-size: $font-size;
 
-
-/* Base */
 .container {
 	position: relative;
 	width: $base-width;
@@ -63,7 +52,6 @@ $base-font-size: $font-size;
 }
 .row { margin-bottom: relative(20px); }
 
-/* For devices larger than 400px */
 @media (min-width: 400px) {
 	.container {
 		width: 85%;
@@ -71,12 +59,10 @@ $base-font-size: $font-size;
 	}
 }
 
-/* For devices larger than 550px */
 @media (min-width: 550px) {
 	@include grid($base-width, $is-fluid, $base-gutter-width, $base-col-count);
 }
 
-/* Tablet (Portrait) */
 @media only screen and (min-width: $tablet-width) and (max-width: $base-width - 1) {
 	.container {
 		width: $tablet-width;
@@ -103,24 +89,21 @@ $base-font-size: $font-size;
 		};
 	}
 
-	// If it is fluid, then we don't need to repeat ourselves. The grid will be identical
+	
 	@if(not $is-fluid) {
-		// Set variables in user global config in skeleton sass root instead of editing directly
-		@include grid($tablet-width, false, $base-gutter-width, $base-col-count); // fixed
+		
+		@include grid($tablet-width, false, $base-gutter-width, $base-col-count); 
 	}
 }
 
-/* Mobile (Portrait) */
 @media only screen and (max-width: $tablet-width - 1) {
 	@include mobileGrid($mobile-portrait-width, $is-fluid, $base-col-count);
 }
 
-/* Mobile (Landscape) */
 @media only screen and (min-width: $mobile-landscape-width + 60) and (max-width: $tablet-width - 1) {
 	@include mobileGrid($mobile-landscape-width, $is-fluid, $base-col-count);
 }
 
-/* Clearing */
 .container:after {
 	content: "\0020";
 	display: block;
