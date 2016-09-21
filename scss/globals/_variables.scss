@@ -1,69 +1,137 @@
 $colors: (
-  base: (
-    "primary":   #4591aa,
-    "selection": #d6d6d6,
-    "lines":     #e0e0e0
-  ),
+    core: (
+        "white: "#fff",
+        "black: "#000"
+    ),
 
-  text: (
-    "primary":   #333,
-    "secondary": #4c4c4c,
-    "heading":   #111,
-    "link":      #9edc94,
-    "ui":        #ddd
-  ),
+    base: (
+        "primary":   #4591aa,
+        "selection": #d6d6d6,
+        "lines":     #e0e0e0
+    ),
 
-  background: (
-    "dark":  #282E31,
-    "light": #f5f5f5,
-    "body":  white
-  ),
+    text: (
+        "primary":   #333,
+        "secondary": #4c4c4c,
+        "heading":   #111,
+        "link":      #9edc94,
+        "ui":        #ddd
+    ),
 
-  state: (
-    "muted":   #aaa,
-    "primary": #4591aa,
-    "success": #45ca69,
-    "warning": #ffb800,
-    "error":   #ca4829
-  ),
+    background: (
+        "dark":  #282E31,
+        "light": #f5f5f5,
+        "body":  white
+    ),
 
-  blue: (
-    "darker":  #495b61,
-    "dark":    #447281,
-    "base":    #4591aa,
-    "light":   #5ab0cc,
-    "lighter": #74cbe8
-  ),
+    state: (
+        "muted":   #aaa,
+        "primary": #4591aa,
+        "success": #45ca69,
+        "warning": #ffb800,
+        "error":   #ca4829
+    ),
 
-  green: (
-    "darker":  #3b6e6e,
-    "dark":    #3b8686,
-    "base":    #37a1a1,
-    "light":   #2dbaba,
-    "lighter": #69d1d1
-  ),
+    blue: (
+        "darker":  #495b61,
+        "dark":    #447281,
+        "base":    #4591aa,
+        "light":   #5ab0cc,
+        "lighter": #74cbe8
+    ),
 
-  cream: (
-    "darker":  #c47858,
-    "dark":    #e29372,
-    "base":    #ecac91,
-    "light":   #f9c2ab,
-    "lighter": #fdd5c3
-  ),
+    green: (
+        "darker":  #3b6e6e,
+        "dark":    #3b8686,
+        "base":    #37a1a1,
+        "light":   #2dbaba,
+        "lighter": #69d1d1
+    ),
 
-  red: (
-    "darker":  #653131,
-    "dark":    #b73333,
-    "base":    #da3c3c,
-    "light":   #f25a5a,
-    "lighter": #fa8181
-  ),
+    cream: (
+        "darker":  #c47858,
+        "dark":    #e29372,
+        "base":    #ecac91,
+        "light":   #f9c2ab,
+        "lighter": #fdd5c3
+    ),
 
-  gray: (
-    "darker":  #333333,
-    "dark":    #4d4d4d,
-    "base":    #666666,
-    "light":   #808080,
-    "lighter": #999999
-  )
+    red: (
+        "darker":  #653131,
+        "dark":    #b73333,
+        "base":    #da3c3c,
+        "light":   #f25a5a,
+        "lighter": #fa8181
+    ),
+
+    gray: (
+        "darker":  #333333,
+        "dark":    #4d4d4d,
+        "base":    #666666,
+        "light":   #808080,
+        "lighter": #999999
+    )
 ) !default;
+
+/* Device Breakpoints */
+$tablet-width: 768px !global;
+$mobile-portrait-width: 300px !global;
+$mobile-landscape-width: 420px !global; 
+$mobile-fluid-width: 100%; 
+
+$grid-max-width: 1000px;
+
+$use-rem: false;
+$use-em: false;
+$use-percent: false;
+
+$prefix-for-webkit:    false;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: false;
+$prefix-for-opera:     false;
+$prefix-for-spec:      false;
+
+$base-col-width: 40px !global; // The width of each columns
+$base-gutter-width: 20px !global; // The space between columns
+$base-col-count: 16 !global; // The number of columns
+$new-grid-width: 80%; // the new grid with set within the 550px breakpoint
+
+// Default overrides for new theme
+$is-fluid: true; // Change to true to enable the fluid grid
+$use-global-border-box: false; // Change to true the enable global border-box
+
+$link-color: #1EAEDB; // default link color
+$link-hover: #0FA0CE; // default link color on :hover
+$link-decoration: underline; // default link decoration
+
+$base-width: if($is-fluid, 100%, ($base-col-width + $base-gutter-width) * $base-col-count);
+
+$font-size: 15px;  // default font size. Change here will adjust sizes across the board.
+$font-weight: 400; // sets the font weight
+$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; // default fonts
+$font-color: #222;  // default font color
+
+$heading-family: $font-family; // default heading (h1-h6) font
+$heading-color: $font-color; // default heading (h1-h6) color
+$heading-weight: 300; // sets the weight of the heading text
+
+$form-font: $font-family; // default form font
+
+$button-color: #555;
+$button-weight: 600;
+$button-font-uppercase: true;
+$button-border-color: #bbb;
+
+// GRID CHANGES
+$grid-max-width: 960px;
+$base-col-count: 12;
+$base-col-width: 60px;
+$use-new-grid: true;
+
+$font-size: 16px !global;  // default font size. Change here will adjust sizes across the board.
+$font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !global; // default fonts
+$heading-family: "Georgia", "Times New Roman", serif !global; // default heading (h1-h6) font
+$font-color: #444 !global;  // default font color
+$heading-color: #181818 !global; // default heading (h1-h6) color
+$form-font: $font-family !global; // default form font
+$base-font-size: $font-size;
