@@ -47,4 +47,32 @@ kbd {
     &--ui {
         color: getColor(text, ui);
     }
+
+    &--success {
+        color: getColor(state, success);
+    }
+    &--warning {
+        color: getColor(state, warning);
+    }
+    &--error {
+        color: getColor(state, error);
+    }
+}
+
+.background {
+    &--primary {
+        background: getColor(background, primary);
+    }
+    &--secondary {
+        background: getColor(background, secondary);
+    }
+    &--success {
+        background: getColor(state, success);
+    }
+    &--warning {
+        background: getColor(state, warning);
+    }
+    &--error {
+        background: getColor(state, error);
+    }
 }
