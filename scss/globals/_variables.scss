@@ -74,8 +74,8 @@ $colors: (
 /* Device Breakpoints */
 $tablet-width: 768px !global;
 $mobile-portrait-width: 300px !global;
-$mobile-landscape-width: 420px !global; 
-$mobile-fluid-width: 100%; 
+$mobile-landscape-width: 420px !global;
+$mobile-fluid-width: 100%;
 
 
 $grid-max-width: 1000px;
@@ -95,7 +95,7 @@ $prefix-for-spec:      false;
 $base-col-width: 40px !global;
 
 // The space between columns
-$base-gutter-width: 20px !global; 
+$base-gutter-width: 20px !global;
 
 // The number of columns
 $base-col-count: 12 !global;
