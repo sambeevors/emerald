@@ -1,132 +1,35 @@
-$tablet-width: 768px !global;
-$mobile-portrait-width: 300px !global;
-$mobile-landscape-width: 420px !global;
-$mobile-fluid-width: 100%;
-$grid-max-width: 1000px;
-$use-rem: false;
-$use-em: false;
-$use-percent: false;
-$prefix-for-webkit: false;
-$prefix-for-mozilla: false;
-$prefix-for-microsoft: false;
-$prefix-for-opera: false;
-$prefix-for-spec: false;
-$base-col-width: 60px !global;
-$base-gutter-width: 20px !global;
-$base-col-count: 12 !global;
-$new-grid-width: 80%;
-$is-fluid: true; 
-$use-global-border-box: true; 
-$link-color: #9edc94; 
-$link-hover: darken(#9edc94, 15); 
-$link-decoration: underline; 
-$base-width: if($is-fluid, 100%, ($base-col-width + $base-gutter-width) * $base-col-count);
-$heading-family: $font-family; 
-$heading-color: $font-color; 
-$form-font: $font-family; 
-$button-color: #555;
-$button-weight: 600;
-$button-font-uppercase: true;
-$button-border-color: #bbb;
-$base-col-count: 12;
-$base-col-width: 60px;
-$use-new-grid: true;
-$form-font: $font-family !global; 
-$base-font-size: $font-size;
+// Needs redoing
+
+$gutter-width: 10px;
 
 .container {
-	position: relative;
-	width: $base-width;
-	max-width: $grid-max-width;
-	margin: 0 auto;
-	padding: 0 relative(20px);
-	box-sizing: border-box;
-}
-.column,
-.columns {
-	width: 100%;
-	float: left;
-	box-sizing: border-box;
-    padding: 20px;
-}
-.row { margin-bottom: relative(20px); }
-
-@media (min-width: 400px) {
-	.container {
-		width: 85%;
-		padding: 0;
-	}
+    max-width: $grid-max-width;
+    margin: 0 auto;
+    display: block;
+    position: relative;
 }
 
-@media (min-width: 550px) {
-	@include grid($base-width, $is-fluid, $base-gutter-width, $base-col-count);
+.row {
+    width: 100%;
+    display: block;
 }
 
-@media only screen and (min-width: $tablet-width) and (max-width: $base-width - 1) {
-	.container {
-		width: $tablet-width;
-		.column,
-		.columns {
-			&.alpha {
-				margin: {
-					left: 0;
-					right: if($is-fluid, 2%, 10px);
-				};
-			}
-			&.omega {
-				margin: {
-					right: 0;
-					left: if($is-fluid, 2%, 10px);
-				};
-			}
-		}
-	}
-	.alpha.omega {
-		margin: {
-			left: 0;
-			right: 0;
-		};
-	}
-
-	
-	@if(not $is-fluid) {
-		
-		@include grid($tablet-width, false, $base-gutter-width, $base-col-count); 
-	}
-}
-
-@media only screen and (max-width: $tablet-width - 1) {
-	@include mobileGrid($mobile-portrait-width, $is-fluid, $base-col-count);
-}
-
-@media only screen and (min-width: $mobile-landscape-width + 60) and (max-width: $tablet-width - 1) {
-	@include mobileGrid($mobile-landscape-width, $is-fluid, $base-col-count);
-}
-
-.container:after {
-	content: "\0020";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-.clearfix, .row {
-	zoom: 1;
-	&:before, &:after {
-		content: "\0020";
-		display: block;
-		overflow: hidden;
-		visibility: hidden;
-		width: 0;
-		height: 0;
-	}
-	&:after { clear: both; }
-}
-.clear {
-	clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+.column {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    
+    &.one-half {
+        max-width: calc(49.7777% - (#{$gutter-width} / 2));
+        margin-right: $gutter-width;
+    }
+    
+    &.one-third { // THIS BIT IS CURRENTLY BROKEN
+        max-width: calc(32.6666% - (#{$gutter-width} * .5));
+        margin-right: $gutter-width;
+    }
+    
+    &:last-child {
+        margin-right: 0;
+    }
 }

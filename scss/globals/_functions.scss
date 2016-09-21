@@ -1,10 +1,7 @@
-@import "dependencies"; // Don't remove me
-
 @function getColor($color, $value: "base") {
     @return map-get(map-get($colors, $color), $value);
 }
 
-// addresses https://github.com/nex3/sass/issues/533
 // number strip-units ( number $number )
 @function strip-units($number) {
 	@return $number / ($number * 0 + 1);
