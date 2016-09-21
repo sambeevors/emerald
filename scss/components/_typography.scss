@@ -96,16 +96,15 @@ kbd {
     &--heading {
         color: getColor(text, heading);
     }
+    &--ui {
+        color: getColor(text, ui);
+    }
     &--link {
         color: getColor(text, link);
 
         &--block {
             @include block-link(getColor(text, link))
         }
-    }
-    &--ui {
-        background: getColor(background, dark);
-        color: getColor(text, ui);
     }
     &--success {
         color: getColor(state, success);

@@ -47,7 +47,7 @@ table {
     &--left {
         text-align: left;
         float: left;
-        
+
         &.-flex {
             justify-content: flex-start;
         }
@@ -56,7 +56,7 @@ table {
     &--right {
         text-align: right;
         float: right;
-        
+
         &.-flex {
             justify-content: flex-end;
         }
@@ -65,7 +65,7 @@ table {
     &--center {
         text-align: center;
         float: none;
-        
+
         &.-flex {
             justify-content: center;
         }

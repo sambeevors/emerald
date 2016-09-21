@@ -4,10 +4,10 @@
 
 .grid-container{
     width: 100%;
-    max-width: 1200px;
+    max-width: $grid-max-width;
 }
 
-/*-- our cleafix hack -- */
+
 .row:before,
 .row:after {
     content:"";
@@ -15,33 +15,30 @@
     clear:both;
 }
 
-[class*='col-'] {
+[class*='column-'] {
     float: left;
     min-height: 1px;
     width: 16.66%;
     /*-- our gutter -- */
     padding: $gutter-width;
-    background-color: #FFDCDC;
 }
 
-.col-1{ width: 16.66%; }
-.col-2{ width: 33.33%; }
-.col-3{ width: 50%;    }
-.col-4{ width: 66.66%; }
-.col-5{ width: 83.33%; }
-.col-6{ width: 100%;   }
+.column-one-sixth{ width: 16.66%; }
+.column-one-third{ width: 33.33%; }
+.column-one-half{ width: 50%;    }
+.column-two-thirds{ width: 66.66%; }
+.column-five-fifths{ width: 83.33%; }
+.column-full-width{ width: 100%;   }
 
 .outline, .outline *{
     outline: 1px solid #F6A1A1;
 }
 
 /*-- some extra column content styling --*/
-[class*='col-'] > p {
- background-color: #FFC2C2;
+[class*='column-'] > p {
  padding: 0;
  margin: 0;
  text-align: center;
- color: white;
 }
 
 
