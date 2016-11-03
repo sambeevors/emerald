@@ -143,28 +143,44 @@ kbd {
 }
 
 .button {
+    text-decoration:none;
+    font-size:16px;
+    font-weight:lighter;
+    padding:0 15px;
+    line-height:32px;
+    height: auto;
+    display:inline-block;
+    clear: both;
+    text-align:center;
+
     &--block {
+        @extend .button;
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
     }
     &--pill {
+        @extend .button;
         border-radius: 16px;
     }
     &--rightcurve {
+        @extend .button;
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
     }
     &--leftcurve {
+        @extend .button;
         border-top-left-radius: 16px;
         border-bottom-left-radius: 16px;
     }
     &--topcurve {
+        @extend .button;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
     }
     &--bottomcurve {
+        @extend .button;
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
     }
@@ -181,18 +197,6 @@ kbd {
         &--secondarythin {
             border: 1px solid getColor(background, secondary);
         }
-    }
-
-    &--block,&--pill,&--rightcurve,&--leftcurve,&--topcurve,&--bottomcurve {
-        text-decoration:none;
-        font-size:16px;
-        font-weight:lighter;
-        padding:0 15px;
-        line-height:32px;
-        height: auto;
-        display:inline-block;
-        clear: both;
-        text-align:center;
     }
 }
 
